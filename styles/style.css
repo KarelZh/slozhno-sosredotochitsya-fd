@@ -125,7 +125,7 @@
 }
 
 .content {
-  padding: 30px 10px 40px;
+  padding: 40px 10px;
   display: grid;
   gap: 50px;
 }
@@ -272,7 +272,7 @@
 
   .paragraph {
     height: 100%;
-    gap: 20px;
+    gap: 10px;
   }
   
   .paragraph__title {
@@ -404,7 +404,7 @@
   }
 
   .section__column {
-    grid-column: 1/5;
+    grid-column: 1/4;
     max-width: 315px;
     min-height: 47px;
   }
