@@ -274,6 +274,11 @@
     line-height: 23.4px;
   }
 
+  .section__card {
+    display: flex;
+    flex-direction: column;
+  }
+
   .section__column {
     max-width: 236px;
   }
