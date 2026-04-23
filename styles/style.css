@@ -12,8 +12,7 @@
   padding: 10px;
   position: relative;
   min-width: 375px;
-  height: 100dvh;
-  min-height: 668px;
+  min-block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -42,7 +41,7 @@
   position: absolute;
   top: 10px;
   right: 28px;
-  display: var(--display);
+  display: var(--rec-display);
 }
 
 .header__article-text {
@@ -55,7 +54,7 @@
   display: block;
   position: absolute;
   top: 9px;
-  left: 36px;
+  left: 40px;
   width: 9px;
   height: 9px;
   background-color: var(--color-text);
@@ -68,6 +67,12 @@
   margin-top: 65px;
 }
 
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .header__theme-menu-item {
   color: var(--color-text);
 }
@@ -76,6 +81,7 @@
   background: transparent;
   text-transform: lowercase;
   border: none;
+  min-width: 70px;
 }
 
 .header__theme-menu-button_active {
@@ -85,7 +91,7 @@
 
 .header__theme-menu-button:hover {
   cursor: pointer;
-  border: var(--border-rgba);
+  outline: var(--border-rgba);
 }
 
 .header__theme-menu-button:focus {
@@ -171,7 +177,7 @@
 
 .paragraph__text-link:hover {
   cursor: pointer;
-  border-bottom: 1px solid var(--bg-color);
+  border-bottom: 1px solid var(--color-border);
   color: var(--border);
 }
 
@@ -201,11 +207,10 @@
 
 .footer {
   position: relative;
-  min-height: 668px;
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  min-block-size: 100vh;
 }
 
 .footer__title {
@@ -219,7 +224,6 @@
 @media (width >= 768px) {
   .header {
     padding: 20px;
-    min-height: 1024px;
   }
   
   .decorated-zone::before {
@@ -234,7 +238,7 @@
   
   .header__article {
     top: 20px;
-    right: 38px;
+    right: 48px;
   }
   
   .header__theme-menu {
@@ -268,10 +272,6 @@
 
   .card {
     grid-column: 2;
-  }
-  
-  .paragraph__text {
-    line-height: 23.4px;
   }
 
   .section__card {
@@ -323,10 +323,6 @@
   .gallery__image-street {
     grid-column: 2/4;
   }
-
-  .footer {
-    min-height: 1024px;
-  }
   
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -334,9 +330,6 @@
 }
 
 @media (width >= 1024px) {
-  .header {
-    min-height: 768px;
-  }
 
   .header__theme-menu {
     justify-self: center;
@@ -371,10 +364,6 @@
   .section__column {
     grid-column: 1/4;
     min-width: 315px;
-    min-height: 47px;
   }
 
-  .footer {
-    min-height: 768px;
-  }
 }

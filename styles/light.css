@@ -18,7 +18,7 @@
   --border-rgba: 1px solid rgba(50, 49, 45, 0.4);
   --border-focus: 1px solid rgba(53, 52, 48, 1);
   --color-border: #353430;
-  --display: none;
+  --rec-display: none;
 }
 
 
@@ -33,5 +33,6 @@
     --border-rgba: 1px solid rgba(50, 49, 45, 0.4);
     --border-focus: 1px solid rgba(53, 52, 48, 1);
     --color-border: #353430;
+    --rec-display: none;
   }
 } 
