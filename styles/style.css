@@ -369,4 +369,7 @@
     max-width: 315px;
   }
 
+  .footer {
+    min-height: 768px;
+  }
 }
