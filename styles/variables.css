@@ -12,4 +12,5 @@
   --border-rgba: 1px solid rgba(255, 0, 112, 0.4);
   --border-focus: 1px solid rgba(255, 0, 112, 1);
   --color-border: #F1B2CE;
+  --display: block;
 }

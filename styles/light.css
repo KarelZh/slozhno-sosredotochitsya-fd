@@ -3,14 +3,6 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-.header__article-text::after {
-  display: none;
-}
-
-.header__article {
-  display: none;
-}
-
 
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
@@ -26,7 +18,9 @@
   --border-rgba: 1px solid rgba(50, 49, 45, 0.4);
   --border-focus: 1px solid rgba(53, 52, 48, 1);
   --color-border: #353430;
+  --display: none;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {

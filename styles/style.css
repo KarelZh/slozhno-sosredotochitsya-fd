@@ -4,13 +4,16 @@
   background-image: var(--background-image);
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
   padding: 10px;
   position: relative;
   min-width: 375px;
-  height: 668px;
+  height: 100vh;
+  min-height: 668px;
 
 }
 
@@ -37,11 +40,10 @@
 }
 
 .header__article {
-  max-width: 52px;
-  min-height: 26px;
   position: absolute;
   top: 10px;
   right: 28px;
+  display: var(--display);
 }
 
 .header__article-text {
@@ -64,7 +66,6 @@
 
 .header__theme-menu {
   justify-self: end;
-  max-height: 98px;
   margin-top: 75px;
 }
 
@@ -83,12 +84,12 @@
   pointer-events: none;
 }
 
-.header__theme-menu-button_active:hover {
+.header__theme-menu-button:hover {
   cursor: pointer;
   border: var(--border-rgba);
 }
 
-.header__theme-menu-button_active:focus {
+.header__theme-menu-button:focus {
   outline: none;
 }
 
@@ -102,7 +103,6 @@
   line-height: 83%;
   color: var(--color-title);
   min-width: 355px;
-  min-height: 192px;
   text-shadow: 4px 4px 0 var(--accent-color);
   margin: 65px 0;
 }
@@ -110,8 +110,6 @@
 .header__text {
   font-weight: 700;
   line-height: 23.4px;
-  min-width: 355px;
-  min-height: 117px;
   margin: 0 0 31px;
   font-size: 18px;
   white-space: pre-line;
@@ -133,16 +131,19 @@
   gap: 20px;
 }
 
+.section__card {
+  gap: 20px;
+}
+
 .section__title {
   font-weight: 700;
   color: var(--color-text);
   min-width: 355px;
-  min-height: 47px;
   line-height: 23.4px;
   font-size: 18px;
 }
 
-.paragraph {
+.card {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -153,27 +154,23 @@
   font-weight: 700;
 }
 
-.paragraph__title-text {
-  margin-bottom: 10px;
-}
-
 .paragraph__title-subtitle {
   font-weight: 400;
 }
 
 .paragraph__text {
   line-height: 23.4px;
-  color: var(--color-text);
+  color: var(--color-border);
 }
 
 .paragraph__text-link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 #FF0070;
+  text-shadow: 2px 2px 0 var(--bg-color);
 }
 
 .paragraph__text-link:hover {
   cursor: pointer;
-  text-decoration: underline;
+  border-bottom: 1px solid var(--bg-color);
   color: var(--border);
 }
 
@@ -190,14 +187,13 @@
   gap: 10px;
 }
 
-.paragraph__galery {
+.galery {
   display: grid;
   gap: 10px;
   min-width: 355px;
-  overflow: hidden;
 }
 
-.paragraph__image {
+.gallery__image {
   width: 100%;
   object-fit: contain;
 }
@@ -221,18 +217,21 @@
 @media (width >= 768px) {
   .header {
     padding: 20px;
-    height: 1024px;
+    min-height: 1024px;
   }
   
   .decorated-zone::before {
+    top: 20px;
     right: 20px;
   }
   
   .decorated-zone::after {
+    bottom: 20px;
     left: 20px;
   }
   
   .header__article {
+    top: 20px;
     right: 38px;
   }
   
@@ -244,7 +243,6 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin: 173px 0 162px -20px;
     text-align: left;
-    min-height: 99px;
   }
   
   .header__text {
@@ -260,24 +258,13 @@
   
   .section__content {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(2, auto);
   }
   
   .section__title {
     min-width: 236px;
-    min-height: 71px;
   }
 
-  .paragraph {
-    height: 100%;
-    gap: 10px;
-  }
-  
-  .paragraph__title {
-    max-height: 23px;
-  }
-
-  .paragraph__subtitle {
+  .card {
     grid-column: 2;
   }
   
@@ -285,14 +272,13 @@
     line-height: 23.4px;
   }
 
-  .section__subtitle {
+  .section__card {
     display: flex;
     flex-direction: column;
   }
 
   .section__column {
     max-width: 236px;
-    min-height: 70px;
   }
 
   .paragraph__column {
@@ -337,7 +323,7 @@
   }
 
   .footer {
-    height: 1024px;
+    min-height: 1024px;
   }
   
   .footer__title {
@@ -346,49 +332,24 @@
 }
 
 @media (width >= 1024px) {
-  .header {
-    height: 768px;
-  }
-
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
-  
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
-
-  .header__article {
-    top: 20px;
-    right: 38px;
-  }
-  
   .header__theme-menu {
     justify-self: center;
     align-items: start;
-    max-height: 26px;
     margin-top: 0;
   }
 
   .header__theme-menu-list {
     display: flex;
+    gap: 10px;
   }
   
   .header__title {
-    min-height: 130px;
     margin: 273px 0 114px -20px;
   }
   
   .header__text {
     min-width: 491px;
-    min-height: 71px;
     margin: 0 0 89px;
-  }
-
-  .paragraph {
-    gap: 10px;
   }
 
   .section__subtitle {
@@ -400,10 +361,6 @@
   .section__column {
     grid-column: 1/4;
     max-width: 315px;
-    min-height: 47px;
   }
 
-  .footer {
-    height: 768px;
-  }
 }
