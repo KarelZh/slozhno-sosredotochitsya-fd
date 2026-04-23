@@ -338,8 +338,7 @@
   }
 
   .header__theme-menu-list {
-    display: flex;
-    gap: 10px;
+    flex-direction: row;
   }
   
   .header__title {
